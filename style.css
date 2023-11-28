@@ -59,8 +59,33 @@ form {
     margin: 0 auto;
 }
 
+.search-result {
+    margin-bottom: 60px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.search-result:hover {
+    transform: scale(1.05);
+}
+
+.search-result a {
+padding: 10px;
+display: block;
+color: #333333;
+text-decoration: none;
+transition: background-color .3s ease-in-out;
+}
+
+.search-result:hover a {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .search-result img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform .3s ease-in-out;
 }
