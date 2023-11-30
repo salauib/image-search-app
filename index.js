@@ -23,16 +23,18 @@ async function searchImages(){
         results.map((results)=>{
             const imageWrapper = document.createElement("div");
             imageWrapper.classList.add("search-result");
-            const image = document.createElement("img")
+            const image = document.createElement("img");
             image.src = results.urls.small;
             image.alt = results.alt_description;
             const imageLink = document.createElement("a");
             imageLink.href = results.links.html;
             imageLink.target = "_blank";
-            console.log(results);
-        })
+            imageLink.textContent = results.alt_description;
 
-        
+            imageWrapper.appendChild(image);
+            imageWrapper.appendChild(imageLink);
+            searchResultsElement.appendChild(imageWrapper);
+        });
 
         if(page > 1){
             showMoreButton.style.display = block;
