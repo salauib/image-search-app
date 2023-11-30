@@ -40,14 +40,14 @@ async function searchImages(){
         if(page > 1){
             showMoreButtonElement.style.display = "block";
         }
-};
+}
 
 formElement.addEventListener("submit", (event)=>{
     event.preventDefault();
     page = 1;
     searchImages();
-});
+})
 
 showMoreButtonElement.addEventListener("click", ()=>{
     searchImages();
-});
+})
